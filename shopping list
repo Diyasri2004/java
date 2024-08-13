@@ -1,0 +1,48 @@
+import java.util.ArrayList;
+class Product {
+    String name;
+    int quantity;
+    double price;
+    public void setName(String n){
+        name=n;
+    }
+    public void setPrice(double p){
+        price=p;
+    } 
+    public void setQuantity(int q){
+        quantity=q;
+    } 
+    public String getName(){
+        return name;
+    }
+    public double getPrice(){
+        return price;
+    }
+    public int getQuantity(){
+        return quantity;
+    }
+    
+class ShoppingCart{
+    ArrayList<Product> items=new ArrayList<Product>();
+    public void addProduct(Product product){
+        items.add(product);
+    }
+    
+    public void removeProduct(Product product){
+        items.remove(product);
+    }
+    
+    public void calculateTotal(){
+        double total;
+        for(Product p: items);
+        {
+            total+=(p.getPrice() * p.getQuantity());
+            }
+            System.out.println("Total: "+total);
+    }
+}
+    
+    
+    
+    
+   
